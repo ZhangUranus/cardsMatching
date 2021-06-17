@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var emojis = ["🐝","🐗","🐴","🪱","🐠","🐕","⚾️","🏓","🏏","🛵","🛥","🚧","🚦",
-                  "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
     
-    @State var emojiAccount = 4
-    
+    var videModle:EmojiMemoryGame
+
     var body: some View {
     
         VStack {
@@ -21,8 +19,8 @@ struct ContentView: View {
                 .padding(.bottom)
             ScrollView{
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65, maximum: 150))]){
-                    ForEach(emojis[..<emojiAccount],id:\.self){ emoji in
-                        Card(content: emoji).aspectRatio(2/3,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)}
+                    ForEach(videModle.cards){ emoji in
+                        Card(content: "").aspectRatio(2/3,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)}
                 }
             }
             Spacer(minLength: 20)
@@ -66,16 +64,17 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = EmojiMemoryGame()
+        ContentView(videModle: game)
             .preferredColorScheme(.dark)
-        ContentView()
+        ContentView(videModle: game)
             .preferredColorScheme(.light)
     }
 }
 
 struct Card:View {
     
-    @State var isFaceUp:Bool = true
+    
     
     var content:String
     
@@ -98,7 +97,7 @@ struct Card:View {
             }
             
         }.onTapGesture {
-            isFaceUp = !isFaceUp
+            
         }
         .foregroundColor(.red)
     }

@@ -11,8 +11,7 @@ struct ContentView: View {
     @State var emojis = ["🐝","🐗","🐴","🪱","🐠","🐕","⚾️","🏓","🏏","🛵","🛥","🚧","🚦",
                   "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
     
-    @State var emojiStart = 0
-    @State var emojiEnd = 6
+    @State var emojiAccount = 4
     
     var body: some View {
     
@@ -22,7 +21,7 @@ struct ContentView: View {
                 .padding(.bottom)
             ScrollView{
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65, maximum: 150))]){
-                    ForEach(emojis[emojiStart..<emojiEnd],id:\.self){ emoji in
+                    ForEach(emojis[..<emojiAccount],id:\.self){ emoji in
                         Card(content: emoji).aspectRatio(2/3,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)}
                 }
             }
@@ -30,49 +29,34 @@ struct ContentView: View {
             
             HStack {
                 Button(action: {
-                    emojiStart = 0
-                    emojiEnd = 9
                     
-                    emojis[emojiStart..<emojiEnd].shuffle()
+                    if(emojiAccount<emojis.count){
+                        emojiAccount += 1
+                    }
+                    
                     
                 }, label: {
                     VStack {
-                        Image(systemName: "car")
-                        
-                        Text("Vehicle")
-                            .font(.body)
+                        Image(systemName: "plus.circle")
+    
                     }
                     
                 })
                 
                 Spacer()
                 Button(action: {
-                    emojiStart = 9
-                    emojiEnd = 18
-                    emojis[emojiStart..<emojiEnd].shuffle()
+                    if(emojiAccount>1){
+                        emojiAccount -= 1
+                    }
                 }, label:{
                 
                     VStack {
-                        Image(systemName: "questionmark.circle")
-                        Text("Theme 2")
-                            .font(.body)
+                        Image(systemName: "minus.circle")
+
                     }
                     
                 })
                 
-                Spacer()
-                Button(action: {
-                    emojiStart = 18
-                    emojiEnd = 26
-                    emojis[emojiStart..<emojiEnd].shuffle()
-                }, label: {
-                    VStack {
-                        Image(systemName: "questionmark.circle")
-                        Text("Theme 3")
-                            .font(.body)
-                    
-                    }
-                })
             }.font(.largeTitle)
             .padding(.horizontal)
             

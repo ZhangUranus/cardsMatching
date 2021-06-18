@@ -8,20 +8,25 @@
 import SwiftUI
 
 
-class EmojiMemoryGame{
+class EmojiMemoryGame:ObservableObject{
     
    
+    //var somethingWillChanged:ObjectWillChangePublisher
 
     static let emojis = ["🐝","🐗","🐴","🪱","🐠","🐕","⚾️","🏓","🏏","🛵","🛥","🚧","🚦",
                      "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
 
     
-    private(set) var model:MemmoryGame<String> = MemmoryGame<String>(numberOfPairCards: 4){ index in
+    @Published private var model: MemmoryGame<String> = MemmoryGame<String>(numberOfPairCards: 4){ index in
          emojis[index]
     }
     
     var cards:Array<MemmoryGame<String>.Card>{
         model.cards
+    }
+    
+    func choose (_ card: MemmoryGame<String>.Card) {
+        model.chooseCard(card)
     }
     
 }

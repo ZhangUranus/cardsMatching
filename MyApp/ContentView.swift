@@ -9,56 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var videModle:EmojiMemoryGame
+    @ObservedObject var videModle:EmojiMemoryGame
 
     var body: some View {
     
         VStack {
-            Text("Memorize!")
-                .font(.largeTitle)
-                .padding(.bottom)
             ScrollView{
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65, maximum: 150))]){
-                    ForEach(videModle.cards){ emoji in
-                        Card(content: "").aspectRatio(2/3,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)}
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]){
+                    ForEach(videModle.cards){ card in
+                        Card(card: card)
+                            .aspectRatio(2/3,contentMode:.fit)
+                            .onTapGesture {
+                                videModle.choose(card)
+                            }
+                        
+                        
+                    }
                 }
-            }
-            Spacer(minLength: 20)
-            
-            HStack {
-                Button(action: {
-                    
-                    if(emojiAccount<emojis.count){
-                        emojiAccount += 1
-                    }
-                    
-                    
-                }, label: {
-                    VStack {
-                        Image(systemName: "plus.circle")
-    
-                    }
-                    
-                })
-                
-                Spacer()
-                Button(action: {
-                    if(emojiAccount>1){
-                        emojiAccount -= 1
-                    }
-                }, label:{
-                
-                    VStack {
-                        Image(systemName: "minus.circle")
-
-                    }
-                    
-                })
-                
-            }.font(.largeTitle)
-            .padding(.horizontal)
-            
-        }
+            }.foregroundColor(.red)
+        }.padding(.horizontal)
     }
 }
 
@@ -75,19 +44,18 @@ struct ContentView_Previews: PreviewProvider {
 struct Card:View {
     
     
-    
-    var content:String
+    let card:MemmoryGame<String>.Card
     
     var body: some View{
         ZStack{
             let shape = RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
             
-            if isFaceUp {
+            if card.isFaceUp {
                 
                 shape.fill().foregroundColor(.white)
             
                 shape.strokeBorder(lineWidth: 10)
-                Text(content)
+                Text(card.content)
                     .font(.largeTitle)
                 
             }
@@ -95,8 +63,6 @@ struct Card:View {
                 shape.fill().foregroundColor(.red)
                 
             }
-            
-        }.onTapGesture {
             
         }
         .foregroundColor(.red)

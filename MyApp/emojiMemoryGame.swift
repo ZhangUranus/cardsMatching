@@ -12,6 +12,8 @@ class EmojiMemoryGame:ObservableObject{
     
    
     //var somethingWillChanged:ObjectWillChangePublisher
+    
+    typealias Card = MemoryGame<String>.Card
 
     static let emojis = ["🐝","🐗","🐴","🪱","🐠","🐕","⚾️","🏓","🏏","🛵","🛥","🚧","🚦",
                      "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
@@ -21,11 +23,11 @@ class EmojiMemoryGame:ObservableObject{
          emojis[index]
     }
     
-    var cards:Array<MemoryGame<String>.Card>{
+    var cards:Array<Card>{
         model.cards
     }
     
-    func choose (_ card: MemoryGame<String>.Card) {
+    func choose (_ card: Card) {
         model.chooseCard(card)
     }
     

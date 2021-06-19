@@ -47,24 +47,32 @@ struct Card:View {
     let card:MemoryGame<String>.Card
     
     var body: some View{
-        ZStack{
-            let shape = RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-            
-            if card.isFaceUp {
-                shape.fill().foregroundColor(.white)
-                shape.strokeBorder(lineWidth: 10)
-                Text(card.content)
-                    .font(.largeTitle)
+        GeometryReader(content: { geometry in
+            ZStack{
+                let shape = RoundedRectangle(cornerRadius: drawingConstent.cornerRadius)
+                    
+                    if card.isFaceUp {
+                        shape.fill().foregroundColor(.white)
+                        shape.strokeBorder(lineWidth: drawingConstent.lineWidth)
+                        Text(card.content)
+                            .font(Font.system(size:  min( geometry.size.height, geometry.size.width) * drawingConstent.radio))
+                        
+                    } else if card.isMatched{
+                        shape.opacity(0)
+                    }
+                    else{
+                        shape.fill().foregroundColor(.red)
+                        
+                    }
                 
-            } else if card.isMatched{
-                shape.opacity(0)
-            }
-            else{
-                shape.fill().foregroundColor(.red)
-                
-            }
-            
-        }
-        .foregroundColor(.red)
+                }
+        })
+    }
+    
+    private struct drawingConstent{
+        static let cornerRadius:CGFloat = 20
+        static let lineWidth:CGFloat = 5
+        static let radio:CGFloat = 0.7
+        
     }
 }

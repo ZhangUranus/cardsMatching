@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0035841026798C9800384762 /* MyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035840F26798C9800384762 /* MyAppApp.swift */; };
-		0035841226798C9800384762 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035841126798C9800384762 /* ContentView.swift */; };
+		0035841026798C9800384762 /* CardMatchingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035840F26798C9800384762 /* CardMatchingGame.swift */; };
+		0035841226798C9800384762 /* EmojiGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035841126798C9800384762 /* EmojiGameView.swift */; };
 		0035841426798C9B00384762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0035841326798C9B00384762 /* Assets.xcassets */; };
 		0035841726798C9B00384762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0035841626798C9B00384762 /* Preview Assets.xcassets */; };
 		0035842226798C9B00384762 /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035842126798C9B00384762 /* MyAppTests.swift */; };
 		0035842D26798C9B00384762 /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035842C26798C9B00384762 /* MyAppUITests.swift */; };
-		00946962267B660100F5E40D /* MemmoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946961267B660100F5E40D /* MemmoryGame.swift */; };
+		00946962267B660100F5E40D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946961267B660100F5E40D /* MemoryGame.swift */; };
 		00946964267B6A0D00F5E40D /* emojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +36,8 @@
 
 /* Begin PBXFileReference section */
 		0035840C26798C9700384762 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0035840F26798C9800384762 /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
-		0035841126798C9800384762 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0035840F26798C9800384762 /* CardMatchingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatchingGame.swift; sourceTree = "<group>"; };
+		0035841126798C9800384762 /* EmojiGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiGameView.swift; sourceTree = "<group>"; };
 		0035841326798C9B00384762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0035841626798C9B00384762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0035841826798C9B00384762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		0035842826798C9B00384762 /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0035842C26798C9B00384762 /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
 		0035842E26798C9B00384762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00946961267B660100F5E40D /* MemmoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemmoryGame.swift; sourceTree = "<group>"; };
+		00946961267B660100F5E40D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,9 +99,9 @@
 		0035840E26798C9700384762 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				0035840F26798C9800384762 /* MyAppApp.swift */,
-				0035841126798C9800384762 /* ContentView.swift */,
-				00946961267B660100F5E40D /* MemmoryGame.swift */,
+				0035840F26798C9800384762 /* CardMatchingGame.swift */,
+				0035841126798C9800384762 /* EmojiGameView.swift */,
+				00946961267B660100F5E40D /* MemoryGame.swift */,
 				00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */,
 				0035841326798C9B00384762 /* Assets.xcassets */,
 				0035841826798C9B00384762 /* Info.plist */,
@@ -265,9 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00946962267B660100F5E40D /* MemmoryGame.swift in Sources */,
-				0035841226798C9800384762 /* ContentView.swift in Sources */,
-				0035841026798C9800384762 /* MyAppApp.swift in Sources */,
+				00946962267B660100F5E40D /* MemoryGame.swift in Sources */,
+				0035841226798C9800384762 /* EmojiGameView.swift in Sources */,
+				0035841026798C9800384762 /* CardMatchingGame.swift in Sources */,
 				00946964267B6A0D00F5E40D /* emojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

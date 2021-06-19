@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MemmoryGame<CardContent:Equatable>{
+struct MemoryGame<CardContent:Equatable>{
     
     var cards: [Card]
     

@@ -17,15 +17,15 @@ class EmojiMemoryGame:ObservableObject{
                      "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
 
     
-    @Published private var model: MemmoryGame<String> = MemmoryGame<String>(numberOfPairCards: 4){ index in
+    @Published private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairCards: 4){ index in
          emojis[index]
     }
     
-    var cards:Array<MemmoryGame<String>.Card>{
+    var cards:Array<MemoryGame<String>.Card>{
         model.cards
     }
     
-    func choose (_ card: MemmoryGame<String>.Card) {
+    func choose (_ card: MemoryGame<String>.Card) {
         model.chooseCard(card)
     }
     

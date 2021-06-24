@@ -15,6 +15,7 @@
 		0035842D26798C9B00384762 /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035842C26798C9B00384762 /* MyAppUITests.swift */; };
 		00946962267B660100F5E40D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946961267B660100F5E40D /* MemoryGame.swift */; };
 		00946964267B6A0D00F5E40D /* emojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */; };
+		00C61A9B2684CACE00975AD7 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C61A9A2684CACE00975AD7 /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +48,10 @@
 		0035842826798C9B00384762 /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0035842C26798C9B00384762 /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
 		0035842E26798C9B00384762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00380B622681B6F50021E1E4 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		00946961267B660100F5E40D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiMemoryGame.swift; sourceTree = "<group>"; };
+		00C61A9A2684CACE00975AD7 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +104,13 @@
 			children = (
 				0035840F26798C9800384762 /* CardMatchingGame.swift */,
 				0035841126798C9800384762 /* EmojiGameView.swift */,
+				00C61A9A2684CACE00975AD7 /* Pie.swift */,
 				00946961267B660100F5E40D /* MemoryGame.swift */,
 				00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */,
 				0035841326798C9B00384762 /* Assets.xcassets */,
 				0035841826798C9B00384762 /* Info.plist */,
 				0035841526798C9B00384762 /* Preview Content */,
+				00380B622681B6F50021E1E4 /* Location.gpx */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C61A9B2684CACE00975AD7 /* Pie.swift in Sources */,
 				00946962267B660100F5E40D /* MemoryGame.swift in Sources */,
 				0035841226798C9800384762 /* EmojiGameView.swift in Sources */,
 				0035841026798C9800384762 /* CardMatchingGame.swift in Sources */,
@@ -427,6 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = YRHKM9ND6L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -448,6 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = YRHKM9ND6L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

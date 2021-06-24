@@ -19,7 +19,7 @@ class EmojiMemoryGame:ObservableObject{
                      "🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚲","🚚","🪝"]
 
     
-    @Published private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairCards: 4){ index in
+    @Published private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairCards: 6){ index in
          emojis[index]
     }
     

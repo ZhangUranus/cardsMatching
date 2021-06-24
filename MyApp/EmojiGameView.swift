@@ -15,7 +15,7 @@ struct EmojiGameView: View {
     
         VStack {
             ScrollView{
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]){
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]){
                     ForEach(game.cards){ card in
                         Card(card: card)
                             .aspectRatio(2/3,contentMode:.fit)
@@ -54,6 +54,8 @@ struct Card:View {
                     if card.isFaceUp {
                         shape.fill().foregroundColor(.white)
                         shape.strokeBorder(lineWidth: drawingConstent.lineWidth)
+                        Pie(startAngle:Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90)).padding(5).opacity(0.4)
+                        
                         Text(card.content)
                             .font(Font.system(size:  min( geometry.size.height, geometry.size.width) * drawingConstent.radio))
                         
@@ -73,6 +75,7 @@ struct Card:View {
         static let cornerRadius:CGFloat = 20
         static let lineWidth:CGFloat = 5
         static let radio:CGFloat = 0.7
+    
         
     }
 }

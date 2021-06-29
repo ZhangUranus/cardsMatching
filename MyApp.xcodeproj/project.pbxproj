@@ -16,6 +16,7 @@
 		00946962267B660100F5E40D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946961267B660100F5E40D /* MemoryGame.swift */; };
 		00946964267B6A0D00F5E40D /* emojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */; };
 		00C61A9B2684CACE00975AD7 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C61A9A2684CACE00975AD7 /* Pie.swift */; };
+		00E75719268B3C420097DFD2 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E75718268B3C420097DFD2 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		00946961267B660100F5E40D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiMemoryGame.swift; sourceTree = "<group>"; };
 		00C61A9A2684CACE00975AD7 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		00E75718268B3C420097DFD2 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				0035840F26798C9800384762 /* CardMatchingGame.swift */,
 				0035841126798C9800384762 /* EmojiGameView.swift */,
+				00E75718268B3C420097DFD2 /* Cardify.swift */,
 				00C61A9A2684CACE00975AD7 /* Pie.swift */,
 				00946961267B660100F5E40D /* MemoryGame.swift */,
 				00946963267B6A0D00F5E40D /* emojiMemoryGame.swift */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E75719268B3C420097DFD2 /* Cardify.swift in Sources */,
 				00C61A9B2684CACE00975AD7 /* Pie.swift in Sources */,
 				00946962267B660100F5E40D /* MemoryGame.swift in Sources */,
 				0035841226798C9800384762 /* EmojiGameView.swift in Sources */,

@@ -55,7 +55,7 @@ struct Card:View {
                             .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
                             .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: false))
                             .font(Font.system(size: drawingConstent.fontSize)).scaleEffect(scale(thatFits: geometry.size))
-            }.cardify(isFaceUp: card.isFaceUp).opacity((card.isMatched == true && (card.isFaceUp == false)) ? 0 : 1)
+            }.cardify(isFaceUp: card.isFaceUp).opacity(((card.isMatched == true) && (card.isFaceUp == false)) ? 0 : 1 )
         })
     }
     
